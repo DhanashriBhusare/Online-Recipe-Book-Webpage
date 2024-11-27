@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Recipe Booking</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Delicious Recipes</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="About.html">About</a></li> 
+                    <li class="nav-item"><a class="nav-link" href="#">Recipes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+<section class="hero text-center text-white d-flex align-items-center justify-content-center" style="height: 100vh;">
+    <div class="overlay"></div>
+    <div class="content">
+        <h1 class="display-4 fw-bold">Welcome to Our Recipe Collection!</h1>
+        <p class="lead">Discover mouth-watering recipes to satisfy your cravings.</p>
+        <form class="search-bar d-flex justify-content-center mt-4">
+            <input type="text" class="form-control form-control-lg w-50 me-2 rounded-pill" placeholder="Search Recipe">
+            <button type="submit" class="btn btn-primary btn-lg rounded-pill px-4">Search</button>
+        </form>
+    </div>
+</section>
+
+<!-- Hero Section CSS -->
+<style>
+.hero {
+    background: url(heo-image.jpg) no-repeat center center/cover; /* Replace 'your-image.jpg' with your image path */
+    position: relative;
+    color: white;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay for text readability */
+    z-index: 1;
+}
+
+.content {
+    z-index: 2;
+    position: relative;
+}
+
+.search-bar input {
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.search-bar input:focus {
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.7); /* Glow effect */
+}
+
+.hero h1 {
+    animation: fadeInDown 1.5s ease-in-out;
+}
+
+.hero p {
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+/* Keyframe animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
+
+
+  <!-- Veggies Section -->
+<section class="categories py-5">
+    <h2 class="text-center mb-4"><strong>Veggies</strong></h2>
+    <div class="row justify-content-center">
+        <!-- Paneer Masala Card -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-lg border-0">
+                <div class="image-container position-relative">
+                    <h5 class="image-title position-absolute top-0 start-50 translate-middle-x text-white bg-dark p-2 rounded-3">Paneer Masala</h5>
+                    <img src="panner-masala.jpg" class="card-img-top img-fluid rounded-3" alt="Paneer Masala" style="height: 400px; object-fit: cover;">
+                    <div class="view-button position-absolute bottom-0 start-50 translate-middle-x mb-4">
+                        <a href="paneer-masala.html">
+                            <button class="btn btn-danger btn-lg shadow-sm">View Recipe</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Veg Biryani Card -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-lg border-0">
+                <div class="image-container position-relative">
+                    <h5 class="image-title position-absolute top-0 start-50 translate-middle-x text-white bg-dark p-2 rounded-3">Veg Biryani</h5>
+                    <img src="vegbiryani.jpg" class="card-img-top img-fluid rounded-3" alt="Veg Biryani" style="height: 400px; object-fit: cover;">
+                    <div class="view-button position-absolute bottom-0 start-50 translate-middle-x mb-4">
+                        <a href="#">
+                            <button class="btn btn-danger btn-lg shadow-sm">View Recipe</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .card {
+        height: 500px; /* Set a fixed height for the card */
+    }
+
+    .card-img-top {
+        object-fit: cover; /* Ensures that the image fills the container */
+        height: 400px; /* Set the image height */
+        width: 100%; /* Image spans the full width of the card */
+    }
+
+    .image-title {
+        width: 100%;
+        text-align: center;
+        z-index: 10;
+    }
+
+    .view-button {
+        width: 100%;
+        text-align: center;
+        z-index: 10;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .image-container:hover .card-img-top {
+        filter: brightness(80%);
+        transition: filter 0.3s ease-in-out;
+    }
+</style>
+
+
+   <!-- non veg -->
+   <section class="categories py-5">
+    <h2 class="text-center mb-4"><strong>Non-Veggies</strong></h2>
+    <div class="row justify-content-center">
+        <!-- Chicken Curry Card -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-lg border-0">
+                <div class="image-container position-relative">
+                    <h5 class="image-title position-absolute top-0 start-50 translate-middle-x text-white bg-dark p-2 rounded-3">Chicken Curry</h5>
+                    <img src="chicken-curry.jpeg" class="card-img-top img-fluid rounded-3" alt="Chicken Curry" style="height: 400px; object-fit: cover;">
+                    <div class="view-button position-absolute bottom-0 start-50 translate-middle-x mb-4">
+                        <a href="#">
+                            <button class="btn btn-danger btn-lg shadow-sm">View Recipe</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Non-Veg Biryani Card -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-lg border-0">
+                <div class="image-container position-relative">
+                    <h5 class="image-title position-absolute top-0 start-50 translate-middle-x text-white bg-dark p-2 rounded-3">Non-Veg Biryani</h5>
+                    <img src="non-vegbiryani.jpg" class="card-img-top img-fluid rounded-3" alt="Non-Veg Biryani" style="height: 400px; object-fit: cover;">
+                    <div class="view-button position-absolute bottom-0 start-50 translate-middle-x mb-4">
+                        <a href="#">
+                            <button class="btn btn-danger btn-lg shadow-sm">View Recipe</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .card {
+        height: 400px; /* Set a fixed height for the card */
+    }
+
+    .card-img-top {
+        object-fit: cover; /* Ensures that the image fills the container */
+        height: 500px; /* Set the image height */
+        width: 100%; /* Image spans the full width of the card */
+    }
+
+    .image-title {
+        width: 100%;
+        text-align: center;
+        z-index: 10;
+    }
+
+    .view-button {
+        width: 100%;
+        text-align: center;
+        z-index: 10;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .image-container:hover .card-img-top {
+        filter: brightness(80%);
+        transition: filter 0.3s ease-in-out;
+    }
+</style>
+
+
+
+<!-- More Products Section -->
+    <section class="categories">
+        <h2><strong>More Products</strong></h2>
+        <div class="row justify-content-center">
+            <div class="col-md-3">
+                <div class="card">
+                    <h5><strong>Pizza</strong></h5>
+                    <img src="pizza.jpg" class="card-img-top" alt="Pizza">
+                    <div class="card-body">
+                        <h5 class="card-title">Pizza</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <h5><strong>Panipuri</strong></h5>
+                    <img src="panipuri.jpg" class="card-img-top" alt="Panipuri">
+                    <div class="card-body">
+                        <h5 class="card-title">Panipuri</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <h5><strong>Burger</strong></h5>
+                    <img src="Burger.jpg" class="card-img-top" alt="Burger">
+                    <div class="card-body">
+                        <h5 class="card-title">Burger</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <h5><strong>Manchurian</strong></h5>
+                    <img src="manchurian.jpg" class="card-img-top" alt="Manchurian">
+                    <div class="card-body">
+                        <h5 class="card-title">Manchurian</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-center text-white py-3">
+        <p>&copy; 2024 Delicious Recipes</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
